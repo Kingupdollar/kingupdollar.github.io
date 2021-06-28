@@ -16,5 +16,4 @@ let questions = [
 for (i=0; i<questions.length; i++){
   alert(questions[i].question);
   alert(questions[i].answer);
-  }
 }
