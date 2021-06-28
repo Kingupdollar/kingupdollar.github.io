@@ -1,16 +1,45 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Flashcards Quizzz</title>
-  </head>
-  <body>
-    
-    <p>Taiwan Trivia Quizzz</p>
-    <button id="b2" onclick="displayQuestion(event);">Question</button>
-    <label id="question"></label></br></br>
-    <button onclick="displayAnswer(event);">Answer</button>
-    <label id="answer"></label>
-    <script src="scripts/index.js"></script>
-  </body>
-</html>
+<p>Taiwan Trivia Quizzz</p>
+<!-- Create a button with a callback -->
+<button id="b2" onclick="displayQuestion(event);">Question</button>
+<label id="question"></label>
+</br></br>
+<button onclick="displayAnswer(event);">Answer</button>
+<label id="answer"></label>
+ 
+<script>
+  let questions = [
+  {
+  "question": "Question 1: What is the highest building in Taiwan?",
+  "answer": "Answer: Taipei 101",
+  },
+  {
+  "question": "Question 2: What is the capital city of Taiwan?",
+  "answer": "Answer: Taipei City",
+  },
+  {
+  "question": "Question 3: How much is Taiwan's population?",
+  "answer": "Answer: 23 million",
+  }
+];
+let count1=0;
+let count2=0;
+
+function displayQuestion(event) {
+  document.getElementById("question").innerHTML = questions[count1%3].question;
+  document.getElementById("answer").innerHTML = "";
+  ++count1;
+  count2=count1-1;
+}
+ 
+function displayAnswer(event) {
+  if (count1===count2+1){
+    document.getElementById("answer").innerHTML = questions[count2%3].answer;
+    count2=count1;
+  }
+  else {
+    document.getElementById("answer").innerHTML = "Please click the question first.";
+    count2=count1;
+  }
+}
+
+</script>
