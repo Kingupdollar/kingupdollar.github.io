@@ -1,3 +1,4 @@
+//making 3 question-answer object sets in an array
 let questions = [
   {
   "question": "Question 1: What is the highest building in Taiwan?",
@@ -12,7 +13,7 @@ let questions = [
   "answer": "Answer: 23 million",
   }
 ];
-
+//looping the objects as alerts(flashcards)
 for (i=0; i<questions.length; i++){
   alert(questions[i].question);
   alert(questions[i].answer);
