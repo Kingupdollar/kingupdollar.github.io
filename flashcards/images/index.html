@@ -12,12 +12,10 @@
      <div style="padding:10px 40px"> 
 
 <h2 align="center">A Happy Math Quizzz</h2>
-<button id="b2" onclick="displayQuestion(event);" style="border:0; color:#FFFFFF; background-color:#4F4F4F; width:200px; height:30px; border-radius:3px;">Click Here for New question</button>
-<label id="question" onmouseover="displayAnswer(event);"></label>
-</br></br>
-    <p><b>Answer:</b></p>
-<p id="answer">(Tips: hover on the question statement to view the answer.)</p>
-<img id="answerImage" width="70%" align="center"></img>
+
+<p id="question" onmouseover="displayAnswer(event);" align="center">Question</p>
+<p id="answer" align="center">Answer</p>
+<img id="answerImage" width="100%" onmouseover="displayQuestion(event);" ></img>
  
   </div>
 </div>
@@ -26,17 +24,17 @@
   let questions = [
   {
   "question": "Question 1: What is the Chain Rule in calculus?",
-  "answer": "Answer shown below:",
+  "answer": "Answer for question 1:",
   "image": "images/1.jpg",
   },
   {
   "question": "Question 2: What is the Product Rule in calculus?",
-  "answer": "Answer shown below:",
+  "answer": "Answer for question 2:",
   "image": "images/2.jpg",
   },
   {
   "question": "Question 3: What is the Pythagorean identity?",
-  "answer": "Answer shown below:",
+  "answer": "Answer for question 3:",
   "image": "images/3.jpg",
   }
 ];
@@ -47,17 +45,29 @@ let count2=0;
 
  //the function to iterate the question statement
 function displayQuestion(event) {
-  document.getElementById("question").innerHTML = questions[count1%3].question;
-  document.getElementById("answer").innerHTML = "(Tips: hover on the question statement to view the answer.)";
-  document.getElementById("answerImage").src = "";
-  ++count1;
-  count2=count1-1;
+  if (count2===0){
+    document.getElementById("answer").innerHTML = "(Tips: hover on the question statement to view the answer)";
+  }
+  else {
+    document.getElementById("question").innerHTML = questions[(count2-1)%3].question;
+    document.getElementById("answer").innerHTML = "(Tips: hover on the question statement to view the answer)";
+    document.getElementById("answerImage").src = "";
+    ++count1;
+  }
+
 }
   
  //the function to show the corresponding answer
 function displayAnswer(event) {
-  document.getElementById("answer").innerHTML = questions[count2%3].answer;
-  document.getElementById("answerImage").src = questions[count2%3].image;
+  if (count2===0){
+    document.getElementById("question").innerHTML = questions[count2%3].question;
+    ++count2;
+  }
+  else if (count2===count1+1){
+    document.getElementById("answer").innerHTML = questions[(count2-1)%3].answer;
+    document.getElementById("answerImage").src = questions[(count2-1)%3].image;
+    ++count2;
+  }
 
   
 }
