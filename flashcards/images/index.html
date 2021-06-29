@@ -3,17 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Flashcards Quizzz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body style="background-color: #F0F0F0; color:#4F4F4F; font-family: 'Roboto', sans-serif;">
+   <div style="margin:5% 25%; border-radius:10px; box-shadow:2px 2px 20px #9D9D9D; background-color: #FFFFFF; min-height: 500px">
+     <div style="padding:10px 40px"> 
 
-<p>A Happy Math Quizzz</p>
-<button id="b2" onclick="displayQuestion(event);">Click Here for New question</button>
+<h2 align="center">A Happy Math Quizzz</h2>
+<button id="b2" onclick="displayQuestion(event);" style="border:0; color:#FFFFFF; background-color:#4F4F4F; width:200px; height:30px; border-radius:3px;">Click Here for New question</button>
 <label id="question" onmouseover="displayAnswer(event);"></label>
 </br></br>
-<p>Answer:</p>
-<p id="answer">Hover on the question statement to view the answer.</p>
+    <p><b>Answer:</b></p>
+<p id="answer">(Tips: hover on the question statement to view the answer.)</p>
 <img id="answerImage" width="20%"></img>
  
+  </div>
+</div>
 <script>
   //making question-answer objects in an array
   let questions = [
@@ -41,7 +48,7 @@ let count2=0;
  //the function to iterate the question statement
 function displayQuestion(event) {
   document.getElementById("question").innerHTML = questions[count1%3].question;
-  document.getElementById("answer").innerHTML = "Hover on the question statement to view the answer.";
+  document.getElementById("answer").innerHTML = "(Tips: hover on the question statement to view the answer.)";
   document.getElementById("answerImage").src = "";
   ++count1;
   count2=count1-1;
