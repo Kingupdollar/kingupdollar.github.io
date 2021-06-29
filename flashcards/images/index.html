@@ -14,7 +14,7 @@
 <h2 align="center">A Happy Math Quizzz</h2>
 
 <p id="question" onmouseover="displayAnswer(event);" align="center">Question</p>
-<p id="answer" align="center">Answer</p>
+<p id="answer" onmouseover="notDisplayAnswer(event);" align="center">Answer</p>
 <img id="answerImage" width="100%" onmouseover="displayQuestion(event);" ></img>
  
   </div>
@@ -67,9 +67,14 @@ function displayAnswer(event) {
     document.getElementById("answer").innerHTML = questions[(count2-1)%3].answer;
     document.getElementById("answerImage").src = questions[(count2-1)%3].image;
     ++count2;
-  }
-
+  } 
+}
   
+  //ask the user to view the question before viewing the answer
+function notDisplayAnswer(event){
+  if (count2===0){
+    document.getElementById("answer").innerHTML = "(Tips: please view the question first)";
+  }
 }
 
 </script>
