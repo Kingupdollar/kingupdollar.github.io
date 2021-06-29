@@ -16,7 +16,7 @@
 <label id="question" onmouseover="displayAnswer(event);"></label>
 </br></br>
 <p><b>Answer:</b></p>
-<p id="answer">Hover on the question statement to view the answer.</p>
+<p id="answer">(Tips: hover on the question statement to view the answer)</p>
  
 </div>
   </div>
@@ -45,7 +45,7 @@ let count2=0;
  //the function to iterate the question statement
 function displayQuestion(event) {
   document.getElementById("question").innerHTML = questions[count1%3].question;
-  document.getElementById("answer").innerHTML = "Hover on the question statement to view the answer.";
+  document.getElementById("answer").innerHTML = "(Tips: hover on the question statement to view the answer)";
   ++count1;
   count2=count1-1;
 }
