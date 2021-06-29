@@ -13,9 +13,9 @@
 
 <h2 align="center">Taiwan Trivia Quizzz</h2>
 </br>
-<label id="question" onmouseover="displayQuestion(event);">Question</label>
+<label id="question" onmouseover="displayAnswer(event);">Question</label>
 </br>
-<p id="answer" onmouseover="displayAnswer(event);">Answer</p>
+<p id="answer" onmouseover="displayQuestion(event);">Answer</p>
  
 </div>
   </div>
@@ -39,22 +39,31 @@
   
   //declare a variable to count the number of the clicking behavior
 let count1=0;
+let count2=0;
 
 
  //the function to iterate the question statement
 function displayQuestion(event) {
-  document.getElementById("question").innerHTML = questions[count1%3].question;
-  document.getElementById("answer").innerHTML = "View answer";
-  ++count1;
+  if (count1===0){
+    document.getElementById("answer").innerHTML = "(Tips: hover on the question to view the first question)";
+  }
+  else if(count1===count2){
+    document.getElementById("question").innerHTML = questions[count1%3].question;
+    document.getElementById("answer").innerHTML = "(Tips: hover on the question statement to view the answer)";
+    ++count1;
+  }
 }
   
  //the function to show the corresponding answer
 function displayAnswer(event) {
   if (count1===0){
-    document.getElementById("answer").innerHTML = "(Please view the question first.)";
+    document.getElementById("question").innerHTML = questions[count1%3].question;
+    document.getElementById("answer").innerHTML = "(Tips: hover again on the question statement to view the answer)";
+    ++count1;
   }
-  else{
+  else if (count1===count2+1){
     document.getElementById("answer").innerHTML = questions[(count1-1)%3].answer;
+    ++count2;
   }
   
 }
