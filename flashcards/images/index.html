@@ -61,6 +61,7 @@ function displayQuestion(event) {
 function displayAnswer(event) {
   if (count2===0){
     document.getElementById("question").innerHTML = questions[count2%3].question;
+    document.getElementById("answer").innerHTML = "(Tips: hover on the question statement to view the answer)";
     ++count2;
   }
   else if (count2===count1+1){
