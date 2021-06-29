@@ -3,18 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Flashcards Quizzz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   </head>
-  <body>
-    
+  <body style="background-color: #F0F0F0; color:#4F4F4F; font-family: 'Roboto', sans-serif;">
+   <div style="margin:5% 25%; border-radius:10px; box-shadow:2px 2px 20px #9D9D9D; background-color: #FFFFFF; min-height: 200px">
+     <div style="padding:10px 40px"> 
 
 
-<p>Taiwan Trivia Quizzz</p>
-<button id="b2" onclick="displayQuestion(event);">Question</button>
+<h2 align="center">Taiwan Triva Quiz</h2>
+<button id="b2" onclick="displayQuestion(event);" style="border:0; color:#FFFFFF; background-color:#4F4F4F; width:100px; height:30px; border-radius:3px;">Question</button>
 <label id="question"></label>
 </br></br>
-<button onclick="displayAnswer(event);">Answer</button>
+<button onclick="displayAnswer(event);" style="border:0; color:#FFFFFF; background-color:#4F4F4F; width:100px; height:30px; border-radius:3px;">Answer</button>
 <label id="answer"></label>
  
+    </div>
+  </div>
 <script>
  //making question-answer objects in an array
   let questions = [
