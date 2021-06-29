@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flashcards Quizzz</title>
+  </head>
+  <body>
+
+<p>A Happy Math Quizzz</p>
+<button id="b2" onclick="displayQuestion(event);">Click Here for New question</button>
+<label id="question" onmouseover="displayAnswer(event);"></label>
+</br></br>
+<p>Answer:</p>
+<p id="answer">Hover on the question statement to view the answer.</p>
+<img id="answerImage"></img>
+ 
+<script>
+  //making question-answer objects in an array
+  let questions = [
+  {
+  "question": "Question 1: What is the Chain Rule in calculus?",
+  "answer": "Answer shown below:",
+  "image": "images/1.jpg",
+  },
+  {
+  "question": "Question 2: What is the Product Rule in calculus?",
+  "answer": "Answer shown below:",
+  "image": "images/2.jpg",
+  },
+  {
+  "question": "Question 3: What is the Pythagorean identity?",
+  "answer": "Answer shown below:",
+  "image": "images/3.jpg",
+  }
+];
+  
+  //declare a variable to count the number of the clicking behavior
+let count1=0;
+let count2=0;
+
+ //the function to iterate the question statement
+function displayQuestion(event) {
+  document.getElementById("question").innerHTML = questions[count1%3].question;
+  document.getElementById("answer").innerHTML = "Hover on the question statement to view the answer.";
+  document.getElementById("answerImage").src = "";
+  ++count1;
+  count2=count1-1;
+}
+  
+ //the function to show the corresponding answer
+function displayAnswer(event) {
+  document.getElementById("answer").innerHTML = questions[count2%3].answer;
+  document.getElementById("answerImage").src = questions[count2%3].image;
+
+  
+}
+
+</script>
+
+  </body>
+</html>
