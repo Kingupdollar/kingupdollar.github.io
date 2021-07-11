@@ -17,7 +17,7 @@ request.onload = function() {
 function displayText(json) {
   // Part I: printing mother cat's names
   // create a paragrapg for mother's names
-  let catInfo = document.createElement('p');
+  let motherInfo = document.createElement('p');
   let catNamesText = 'Name of mother cats: ';
   // looping through the list of mother cat and capture their name
   for(let i=0; i<json.length; i++){
@@ -29,9 +29,9 @@ function displayText(json) {
       catNamesText += 'and ' + json[i].name + '.';
     }
   }
-  catInfo.textContent = catNamesText
+  motherInfo.textContent = catNamesText
   // adding the paragraph to the section
-  section.appendChild(catInfo);
+  section.appendChild(motherInfo);
   
   // Part II: printing kitten numbers
   // create a paragrapg for kitten numbers
