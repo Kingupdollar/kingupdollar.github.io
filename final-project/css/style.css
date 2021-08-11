@@ -1,5 +1,5 @@
 .feedbackCorrect {
-  padding-left: 30px; 
+  padding: 7px 20px; 
   background: #F5FFE8; 
   border: 2px solid #82D900; 
   border-radius: 5px; 
@@ -7,7 +7,7 @@
 }
 
 .feedbackInorrect {
-  padding-left: 30px; 
+  padding: 7px 20px; 
   background: #FFECEC; 
   border: 2px solid #CE0000; 
   border-radius: 5px; 
