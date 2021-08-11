@@ -1,0 +1,41 @@
+[
+  [
+    {
+      "question": "Question 1: Which part of camera works as the similar character as the pupil in an eyeball?",
+      "options": [
+        "lens",
+        "film",
+        "aperture"
+      ]
+    },
+    {
+      "question": "Question 2: Which part of camera works as the similar character as the retina in an eyeball?",
+      "options": [
+        "lens",
+        "film",
+        "aperture"
+      ]
+    }
+  ],
+  
+  
+  [
+    {
+      "question": "Question 1: What is the highest building in Taiwan?",
+      "options": [
+        "Answer: Taipei 101",
+        
+      ]
+    },
+    {
+      "question": "Question 1: What is the highest building in Taiwan?",
+      "options": [
+        "Answer: Taipei 101",
+        
+      ]
+    }
+  ],
+  
+  
+  
+];
