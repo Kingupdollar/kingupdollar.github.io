@@ -52,24 +52,30 @@ Here are some common symptoms of retinal detachment:</p>
     
     <div class="question">
       <p>Question 1: Which of the following choices is NOT a possible symptom of retinal detachment?</p>
-      <input type="radio" id="huey" name="drone" value="huey">
+      <input type="radio" id="q2-1A" name="q2-1" value="q2-1A" onclick="incorrectFeedback1(event);">
       <label for="huey">brief flashes of light in vision</label><br>
-      <input type="radio" id="dewey" name="drone" value="dewey">
+      <input type="radio" id="q2-1B" name="q2-1" value="q2-1B" onclick="incorrectFeedback1(event);">
       <label for="dewey">a sudden increase in the number of floaters</label><br>
-      <input type="radio" id="louie" name="drone" value="louie">
+      <input type="radio" id="q2-1C" name="q2-1" value="q2-1C" onclick="incorrectFeedback1(event);">
       <label for="louie">a dense shadow in vision</label><br>
-      <input type="radio" id="louie" name="drone" value="louie">
+      <input type="radio" id="q2-1D" name="q2-1" value="q2-1D" onclick="correctFeedback1(event);">
       <label for="louie">eye pain</label><br><br>
+      
+      <section id="feedback1"></section>
+      
     </div>
     
     <div class="question">
-      <p>Question 1: Which part of camera works as the similar character as the retina in an eyeball?</p>
-      <input type="radio" id="huey" name="drone" value="huey">
-      <label for="huey">lens</label><br>
-      <input type="radio" id="dewey" name="drone" value="dewey">
-      <label for="dewey">film</label><br>
-      <input type="radio" id="louie" name="drone" value="louie">
-      <label for="louie">aperture</label><br><br>
+      <p>Question 2: Which of the following metaphor illustrates retinal detachment?</p>
+      <input type="radio" id="q2-2A" name="q2-2" value="q2-2A" onclick="incorrectFeedback2(event);">
+      <label for="huey">the lens on a camera is broken</label><br>
+      <input type="radio" id="q2-2B" name="q2-2" value="q2-2B" onclick="correctFeedback2(event);">
+      <label for="dewey">the film of a camera is not at its original position</label><br>
+      <input type="radio" id="q2-2C" name="q2-2" value="q2-2C" onclick="incorrectFeedback2(event);">
+      <label for="louie">the circuit of a camera is not connected</label><br><br>
+      
+      <section id="feedback2"></section>
+      
     </div>
     
     <div style="text-align:center;">
@@ -80,6 +86,6 @@ Here are some common symptoms of retinal detachment:</p>
   </div>
   
   </div>
-  
+  <script src="../script/script.js"></script>
 </body>
 </html>
