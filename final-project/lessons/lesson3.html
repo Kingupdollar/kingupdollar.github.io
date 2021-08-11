@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link href="../css/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -51,24 +51,30 @@ Genetic factors promoting local inflammation and photoreceptor degeneration may 
     
     <div class="question">
       <p>Question 1: Which of the following is NOT a possible risk factor of retinal detachment?</p>
-      <input type="radio" id="huey" name="drone" value="huey">
+      <input type="radio" id="q3-1A" name="q3-1" value="q3-1A" onclick="correctFeedback1(event);">
       <label for="huey">blue ray exposure</label><br>
-      <input type="radio" id="dewey" name="drone" value="dewey">
+      <input type="radio" id="q3-1B" name="q3-1" value="q3-1B" onclick="incorrectFeedback1(event);">
       <label for="dewey">severe myopia</label><br>
-      <input type="radio" id="louie" name="drone" value="louie">
+      <input type="radio" id="q3-1C" name="q3-1" value="q3-1C" onclick="incorrectFeedback1(event);">
       <label for="louie">trauma</label><br>
-      <input type="radio" id="louie" name="drone" value="louie">
+      <input type="radio" id="q3-1D" name="q3-1" value="q3-1D" onclick="incorrectFeedback1(event);">
       <label for="louie">family history</label><br><br>
+      
+      <section id="feedback1"></section>
+      
     </div>
     
     <div class="question">
       <p>Question 2: Which kind of people are more likely to have retinal detachment?</p>
-      <input type="radio" id="huey" name="drone" value="huey">
+      <input type="radio" id="q3-2A" name="q3-2" value="q3-2A" onclick="correctFeedback2(event);">
       <label for="huey">athletes</label><br>
-      <input type="radio" id="dewey" name="drone" value="dewey">
+      <input type="radio" id="q3-2B" name="q3-2" value="q3-2B" onclick="incorrectFeedback2(event);">
       <label for="dewey">Asian people</label><br>
-      <input type="radio" id="louie" name="drone" value="louie">
+      <input type="radio" id="q3-2C" name="q3-2" value="q3-2C" onclick="incorrectFeedback2(event);">
       <label for="louie">people under 20</label><br><br>
+      
+      <section id="feedback2"></section>
+      
     </div>
     
     <div style="text-align:center;">
