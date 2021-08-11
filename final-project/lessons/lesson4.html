@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link href="../css/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -42,23 +42,29 @@ If recurrent retinal detachment happens and the scleral buckle surgery has alrea
     <div class="question">
       <p>Question 1:<br>Consider the situation of the following patient and determine which will be the suitable treatment in this case:
 Patient A is detected to have retinal tears. There are some breaks on the peripheral of his retina. However, his retina is not yet detached.</p>
-      <input type="radio" id="huey" name="drone" value="huey">
+      <input type="radio" id="q4-1A" name="q4-1" value="q4-1A" onclick="correctFeedback1(event);">
       <label for="huey">laser surgery</label><br>
-      <input type="radio" id="dewey" name="drone" value="dewey">
+      <input type="radio" id="q4-1B" name="q4-1" value="q4-1B" onclick="incorrectFeedback1(event);">
       <label for="dewey">scleral buckle surgery</label><br>
-      <input type="radio" id="louie" name="drone" value="louie">
+      <input type="radio" id="q4-1C" name="q4-1" value="q4-1C" onclick="incorrectFeedback1(event);">
       <label for="louie">vitrectomy</label><br><br>
+      
+      <section id="feedback1"></section>
+      
     </div>
     
     <div class="question">
       <p>Question 2:<br>Consider the situation of the following patient and determine which will be the suitable treatment in this case:
 Patient B has recurrent retinal detachment. He had the scleral buckle surgery for the last time his retina was detached.</p>
-      <input type="radio" id="huey" name="drone" value="huey">
+      <input type="radio" id="q4-2A" name="q4-2" value="q4-2A" onclick="incorrectFeedback2(event);">
       <label for="huey">laser surgery</label><br>
-      <input type="radio" id="dewey" name="drone" value="dewey">
+      <input type="radio" id="q4-2B" name="q4-2" value="q4-2B" onclick="incorrectFeedback2(event);">
       <label for="dewey">scleral buckle surgery</label><br>
-      <input type="radio" id="louie" name="drone" value="louie">
+      <input type="radio" id="q4-2C" name="q4-2" value="q4-2C" onclick="correctFeedback2(event);">
       <label for="louie">vitrectomy</label><br><br>
+      
+      <section id="feedback2"></section>
+      
     </div>
     
     <div style="text-align:center;">
