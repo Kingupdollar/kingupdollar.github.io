@@ -1,3 +1,19 @@
+.feedbackCorrect {
+  padding-left: 30px; 
+  background: #F5FFE8; 
+  border: 2px solid #82D900; 
+  border-radius: 5px; 
+  color: #82D900;
+}
+
+.feedbackInorrect {
+  padding-left: 30px; 
+  background: #FFECEC; 
+  border: 2px solid #CE0000; 
+  border-radius: 5px; 
+  color: #CE0000;
+}
+
 .question {
   margin-bottom: 10px; 
   padding: 30px; 
