@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link href="../css/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
       </p>
     </div>
     
-    <img src="../images/eye.png" style="width:100%;">
+    <img src="kingupdollar.github.io/final-project/images/eye.png" style="width:100%;">
     
 	  <p>The front visible part of the eye is made up of the whitish sclera, a colored iris, and the pupil. The outermost layer of an eyeball, known as the fibrous tunic, is composed of the cornea and sclera, which provide shape to the eye and support the deeper structures.<br><br>
 The eye includes a lens similar to lenses found in optical instruments such as cameras and the same physics principles can be applied. The pupil of the human eye is its aperture. Refraction in the cornea causes the effective aperture (the entrance pupil) to differ slightly from the physical pupil diameter.<br><br>
@@ -41,23 +41,29 @@ The retina is the innermost, light-sensitive layer of tissue of the eye. If we c
     </div>
     
     <div class="question">
-      <p>Question 1: Which part of camera works as the similar character as the retina in an eyeball?</p>
-      <input type="radio" id="huey" name="drone" value="huey">
+      <p>Question 1: Which part of camera works as the similar character as the pupil in an eyeball?</p>
+      <input type="radio" id="q1-1A" name="q1-1" value="lens" onclick="incorrectFeedback1(event);">
       <label for="huey">lens</label><br>
-      <input type="radio" id="dewey" name="drone" value="dewey">
+      <input type="radio" id="q1-1B" name="q1-1" value="film" onclick="incorrectFeedback1(event);">
       <label for="dewey">film</label><br>
-      <input type="radio" id="louie" name="drone" value="louie">
+      <input type="radio" id="q1-1C" name="q1-1" value="aperture" onclick="correctFeedback1(event);">
       <label for="louie">aperture</label><br><br>
+      
+      <section id="feedback1"></section>
+      
     </div>
     
     <div class="question">
       <p>Question 1: Which part of camera works as the similar character as the retina in an eyeball?</p>
-      <input type="radio" id="huey" name="drone" value="huey">
+      <input type="radio" id="q1-2A" name="q1-2" value="lens" onclick="incorrectFeedback2(event);">
       <label for="huey">lens</label><br>
-      <input type="radio" id="dewey" name="drone" value="dewey">
+      <input type="radio" id="q1-2B" name="q1-2" value="film" onclick="correctFeedback2(event);">
       <label for="dewey">film</label><br>
-      <input type="radio" id="louie" name="drone" value="louie">
+      <input type="radio" id="q1-2C" name="q1-2" value="aperture" onclick="incorrectFeedback2(event);">
       <label for="louie">aperture</label><br><br>
+      
+      <section id="feedback2"></section>
+      
     </div>
     
     <div style="text-align:center;">
