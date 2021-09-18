@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accessibility Course Overview</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/project2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="project2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+    <header id="home">
+      <h1>Main Content</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#link">Links</a></li> 
+          <li><a href="#signup">Sign Up</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!--Replace the original image with new image that applys the color contrast guideline-->
+      <img src="pics/banner-01.png" alt="Text showing Accessibility Overview">
+
+      <!--Put the video on Youtube for caption and Youdescribe for audio description-->
+      <iframe width="100%" height="700px" src="https://youdescribe.org/embed/7tXZTLT7GQA?ad=61455dca3b2e2707ed89cc06"></iframe>
+    
+      <!--The hover effect will apper in more than color changes-->
+      <section id="link">
+        <h2>Links</h2>
+        <ul>
+          <li><a href="http://accessibility.cs.cmu.edu">Accessibility Research at CMU</a></li>
+          <li><a href="https://www.cmu.edu/hr/eos/disability/">Disability Services at CMU</a></li>
+          <li><a href="https://hamster.dance/hamsterdance/">Hampster Dance</a></li>
+        </ul>
+      </section>
+
+      <!--Add labels for each input. Change the checkbox style-->
+      <section id="signup">
+        <h2>Sign Up!</h2>
+        <form id="sign-up-form">
+          <div>
+            <label id="firstnamelabel" for=”firstname”>*First Name:</label><br> 
+            <input id="firstname" name="firstname" type="text" size="30"><br>
+            <p id="firstnamediv" class="error"></p><br>
+
+            <label id="middlenamelabel" for=”middlename”>Middle Name: (optional)</label><br> 
+            <input id="middlename" name="middlename" type="text" size="30"><br><br> 
+
+            <label id="lastnamelabel" for=”lastname”>*Last Name:</label><br> 
+            <input id="lastname" name="lastname" type="text" size="30"><br>
+            <p id="lastnamediv" class="error"></p>
+          </div>
+
+          <div>
+            <label for=”email”>*Email:</label><br> 
+            <input id="email" name="email" type="email" size="60" placeholder="example@email.com">
+            <p id="emaildiv" class="error"></p>
+            <input id="emailpreference" name="emailpreference" type="checkbox" checked>
+            <label for="emailpreference">Check if you'd like to receive occassional emails with offers from us.</label>
+          </div>
+
+          <div>
+            <label for=”comments”>Additional Comments: (optional)</label><br>
+            <textarea id=”comments” name=”comments” rows="5" cols="60"></textarea>
+          </div>
+
+          <div id="signupdiv" align="center">
+            <input type="button" value="Sign Up!" id="signupbutton">
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
